@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
-
+    const [activeSection, setActiveSection] = useState('home');
     const Links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/Statistics">Statistics</NavLink></li>
-        <li><NavLink to="/Dashboard">Dashboard</NavLink></li>
+        <li><NavLink to="/home" onClick={() => setActiveSection('home')}>Home</NavLink></li>
+        <li><NavLink onClick={() => setActiveSection('statistics')} to="/statistics">Statistics</NavLink></li>
+        <li><NavLink onClick={() => setActiveSection('dashboard')} to="/dashboard">Dashboard</NavLink></li>
     </>
     return (
-        <div className="navbar py-6 bg-base-100">
+        <div className={`${activeSection === 'home' ? "navbar py-6 bg-[#9538E2] rounded-t-xl text-white" : "navbar py-6 bg-base-100"}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,11 +42,10 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <div className='text-2xl'><BsCart3 /></div>
-                <div className='text-2xl'><FaRegHeart /></div>
+                <div className='text-2xl p-4 bg-white border rounded-full text-black'><BsCart3 /></div>
+                <div className='text-2xl p-4 bg-white border rounded-full text-black'><FaRegHeart /></div>
             </div>
         </div>
     );
 };
-
 export default NavBar;

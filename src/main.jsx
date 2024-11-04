@@ -11,6 +11,7 @@ import ErrorPage from './Components/ErrorPage.jsx';
 import Home from './Components/Home/Home.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import Statistics from './Components/Statistics/Statistics.jsx';
+import Products from './Components/Home/Products.jsx';
 
 
 const router = createBrowserRouter([
@@ -20,15 +21,20 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/",
+        path: "/home",
         element: <Home></Home>
       },
       {
-        path: "/Statistics",
+        path: "/statistics",
         element: <Statistics></Statistics>
       },
       {
-        path: "/Dashboard",
+        path: "/cards/:product_id",
+        element: <Products></Products>,
+        loader: () => fetch('../public/Laptop.json')
+      },
+      {
+        path: "/dashboard",
         element: <Dashboard></Dashboard>
       }
     ],

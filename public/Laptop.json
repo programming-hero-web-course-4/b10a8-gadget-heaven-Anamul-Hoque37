@@ -1,0 +1,182 @@
+[
+    {
+        "product_id": 101,
+        "product_title": "UltraBook Pro 15",
+        "product_image": "https://i.ibb.co.com/54Z60Rm/Ultra-Book-Pro-15.jpg",
+        "category": "Laptops",
+        "price": 1299.99,
+        "description": "A sleek and powerful 15-inch laptop designed for professionals.",
+        "Specification": [
+            "Intel Core i7 Processor",
+            "16GB RAM",
+            "512GB SSD",
+            "15.6 inch Full HD Display",
+            "Windows 11 Pro",
+            "Battery life up to 12 hours"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 102,
+        "product_title": "Gaming Master GX17",
+        "product_image": "https://i.ibb.co.com/dLb74RD/Gaming-Master-GX17.jpg",
+        "category": "Laptops",
+        "price": 1599.99,
+        "description": "High-performance gaming laptop with advanced cooling and graphics.",
+        "Specification": [
+            "AMD Ryzen 7 Processor",
+            "16GB RAM",
+            "1TB SSD",
+            "17.3 inch QHD Display",
+            "NVIDIA GeForce RTX 3060",
+            "RGB Backlit Keyboard"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 103,
+        "product_title": "Compact Laptop 13 Slim",
+        "product_image": "https://i.ibb.co.com/YhF6bxM/Compact-Laptop-13-Slim.jpg",
+        "category": "Laptops",
+        "price": 899.99,
+        "description": "A lightweight and ultra-slim laptop, ideal for on-the-go usage.",
+        "Specification": [
+            "Intel Core i5 Processor",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3 inch Full HD Display",
+            "Windows 11 Home",
+            "Battery life up to 10 hours"
+        ],
+        "availability": false,
+        "rating": 4.2
+    },
+    {
+        "product_id": 104,
+        "product_title": "Student Laptop Basic",
+        "product_image": "https://i.ibb.co.com/Y8S4srz/Student-Laptop-Basic.jpg",
+        "category": "Laptops",
+        "price": 499.99,
+        "description": "Affordable and reliable laptop, perfect for students and everyday tasks.",
+        "Specification": [
+            "Intel Pentium Processor",
+            "4GB RAM",
+            "128GB SSD",
+            "14 inch HD Display",
+            "Windows 10 Home",
+            "Lightweight design"
+        ],
+        "availability": true,
+        "rating": 3.8
+    },
+    {
+        "product_id": 105,
+        "product_title": "BusinessPro Elite 14",
+        "product_image": "https://i.ibb.co.com/twfPwnB/Business-Pro-Elite-14.jpg",
+        "category": "Laptops",
+        "price": 1149.99,
+        "description": "Robust business laptop with enhanced security and durability.",
+        "Specification": [
+            "Intel Core i7 Processor",
+            "16GB RAM",
+            "512GB SSD",
+            "14 inch Full HD Display",
+            "Windows 11 Pro",
+            "Fingerprint Reader"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 106,
+        "product_title": "Galaxy X10 Pro",
+        "product_image": "https://i.ibb.co.com/DD9zbyL/Galaxy-X10-Pro.jpg",
+        "category": "Mobiles",
+        "price": 799.99,
+        "description": "A powerful smartphone with an immersive display and advanced camera features.",
+        "Specification": [
+            "6.7 inch AMOLED Display",
+            "128GB Storage, 8GB RAM",
+            "Quad-camera setup with 108MP main sensor",
+            "4500mAh battery with fast charging",
+            "5G enabled",
+            "Android 12"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 107,
+        "product_title": "Pixel Pro 6",
+        "product_image": "https://i.ibb.co.com/P5yJG5Y/Pixel-Pro-6.jpg",
+        "category": "Mobiles",
+        "price": 999.99,
+        "description": "Flagship smartphone with Google's advanced AI camera and seamless Android experience.",
+        "Specification": [
+            "6.4 inch OLED Display",
+            "256GB Storage, 12GB RAM",
+            "Dual-camera setup with AI enhancements",
+            "5000mAh battery with wireless charging",
+            "5G enabled",
+            "Android 13"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 108,
+        "product_title": "EcoPhone Lite",
+        "product_image": "https://i.ibb.co.com/qdFN2vK/Eco-Phone-Lite.jpg",
+        "category": "Mobiles",
+        "price": 299.99,
+        "description": "Budget-friendly smartphone with essential features and eco-friendly packaging.",
+        "Specification": [
+            "6.1 inch HD+ Display",
+            "64GB Storage, 4GB RAM",
+            "Dual-camera setup with 13MP main sensor",
+            "4000mAh battery with fast charging",
+            "4G LTE",
+            "Android 11 Go Edition"
+        ],
+        "availability": false,
+        "rating": 4.0
+    }, 
+    {
+        "product_id": 109,
+        "product_title": "TabMaster Pro 11",
+        "product_image": "https://i.ibb.co.com/m029Qnd/Tab-Master-Pro-11.jpg",
+        "category": "Tablets",
+        "price": 599.99,
+        "description": "A high-performance tablet with a stunning display and multitasking capabilities.",
+        "Specification": [
+            "11 inch Liquid Retina Display",
+            "128GB Storage, 6GB RAM",
+            "12MP rear camera, 8MP front camera",
+            "7500mAh battery with fast charging",
+            "Supports stylus and keyboard",
+            "Android 12"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 110,
+        "product_title": "KidsTab Safe Edition",
+        "product_image": "https://i.ibb.co.com/f1rwrmz/Kids-Tab-Safe-Edition.jpg",
+        "category": "Tablets",
+        "price": 199.99,
+        "description": "A tablet designed for kids, featuring parental controls and a durable case.",
+        "Specification": [
+            "8 inch HD Display",
+            "32GB Storage, 3GB RAM",
+            "5MP rear camera, 2MP front camera",
+            "4000mAh battery with long battery life",
+            "Kid-friendly apps and parental controls",
+            "Android 10"
+        ],
+        "availability": false,
+        "rating": 4.3
+    }
+]
