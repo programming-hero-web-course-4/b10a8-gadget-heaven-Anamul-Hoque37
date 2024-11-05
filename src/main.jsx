@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,8 +11,6 @@ import Home from './Components/Home/Home.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import Statistics from './Components/Statistics/Statistics.jsx';
 import Products from './Components/Home/Products.jsx';
-import Cart from './Components/Dashboard/Cart.jsx';
-import Wishlist from './Components/Dashboard/Wishlist.jsx';
 
 
 const router = createBrowserRouter([
@@ -40,14 +37,6 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
         loader: () => fetch('../public/Laptop.json')
       }
-      // {
-      //   path: "/dashboard/cart",
-      //   element: <Cart></Cart>
-      // },
-      // {
-      //   path: "/dashboard/wishlist",
-      //   element: <Wishlist></Wishlist>
-      // }
     ],
   },
 ]);

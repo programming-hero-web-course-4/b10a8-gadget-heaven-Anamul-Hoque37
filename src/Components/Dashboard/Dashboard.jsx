@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet, useLoaderData } from 'react-router-dom';
-import DashBanner from './Dashbanner';
-import { getStoreCardList } from '../Utilities/addToStore';
+import { getStoreCardList, getStoreWishList } from '../Utilities/addToStore';
 import Cart from './Cart';
+import Wishlist from './Wishlist';
 
 const Dashboard = () => {
     const [cartList, setCartList] = useState([])
@@ -12,12 +12,23 @@ const Dashboard = () => {
         const storedCartListInt = storedCartList.map(id => parseInt(id));
         const allCartList = allCarts.filter(cart => storedCartListInt.includes(cart.product_id));
         setCartList(allCartList)
-    },[])
-
+    },[]);
+    const [wishList, setWishList] = useState([])
+    const allWishLists = useLoaderData();
+    useEffect(()=>{
+        const storedWishList = getStoreWishList();
+        const storedWishListInt = storedWishList.map(id => parseInt(id));
+        const allWishList = allWishLists.filter(wish => storedWishListInt.includes(wish.product_id));
+        setWishList(allWishList)
+    },[]);
     const [isActive, setIsActive] = useState({
         available: true,
         Status: "cart"
-    })
+    });
+    const handleSortByPrice = () =>{
+        const sortedCartList = [...cartList].sort((a,b) => b.price - a.price)
+        setCartList(sortedCartList);
+    }
     const handleIsActiveState = (status) => {
         if (status == "cart") {
             setIsActive({
@@ -50,7 +61,7 @@ const Dashboard = () => {
                     <h1 className='text-3xl font-bold '>Cart: {cartList.length}</h1>
                     <div className='flex gap-3 items-center'>
                         <p className='text-2xl font-bold text-[#0B0B0B]'>Total Cost: </p>
-                        <button className='text-lg font-medium border p-2 px-4 rounded-3xl bg-[#FFFFFF] text-[#9538E2]'>Sort by Price</button>
+                        <button onClick={handleSortByPrice} className='text-lg font-medium border p-2 px-4 rounded-3xl bg-[#FFFFFF] text-[#9538E2]'>Sort by Price</button>
                         <button className='text-lg font-medium p-2 px-4 rounded-3xl bg-[#9538E2] text-[#FFFFFF]'>Purchase</button>
                     </div>
                 </div>
@@ -68,7 +79,7 @@ const Dashboard = () => {
                 </div>
                 <div className='grid grid-cols-1 w-full gap-6'>
                     {
-                        // selectedPlayer.map((player, index) =><Selected key={index} handleDelete={handleDelete} player={player}></Selected>)
+                        wishList.map((wish, index) =><Wishlist key={index} wish={wish}></Wishlist>)
                     }
                 </div>
             </div>

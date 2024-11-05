@@ -11,7 +11,6 @@ const Products = () => {
     const id = parseInt(product_id)
     const product = data.find(product => product.product_id === id)
     const { product_image, product_title, price, description, Specification, rating, availability } = product
-    console.log(product)
 
     const handleMarkAsCard = (id) => {
         addToStoreCardList(id);

@@ -37,4 +37,4 @@ const addToStoreWishList = (id) =>{
     }
 }
 
-export { addToStoreCardList, addToStoreWishList, getStoreCardList };
+export { addToStoreCardList, addToStoreWishList, getStoreCardList, getStoreWishList };

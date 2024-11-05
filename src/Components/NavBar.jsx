@@ -2,13 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
-import { getStoreCardList } from './Utilities/addToStore';
+import { getStoreCardList, getStoreWishList } from './Utilities/addToStore';
 
 const NavBar = () => {
     const [count, setCount] = useState([])
     useEffect(()=>{
         const allCartList = getStoreCardList();
         setCount(allCartList);
+    },[]);
+    const [wishCount, setWishCount] = useState([])
+    useEffect(()=>{
+        const allWishList = getStoreWishList();
+        setWishCount(allWishList);
     },[])
     const [activeSection, setActiveSection] = useState('/');
     const Links = <>
@@ -48,8 +53,8 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <div className='text-2xl p-4 bg-white border rounded-full text-black'><BsCart3 /> {count.length}</div>
-                <div className='text-2xl p-4 bg-white border rounded-full text-black'><FaRegHeart /></div>
+                <div className='text-2xl p-4 bg-white border rounded-full text-black'>{count.length}<BsCart3 /></div>
+                <div className='text-2xl p-4 bg-white border rounded-full text-black'>{wishCount.length}<FaRegHeart /></div>
             </div>
         </div>
     );
