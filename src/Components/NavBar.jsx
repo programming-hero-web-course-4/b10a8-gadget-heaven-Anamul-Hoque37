@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
+import { getStoreCardList } from './Utilities/addToStore';
 
 const NavBar = () => {
-    const [activeSection, setActiveSection] = useState('home');
+    const [count, setCount] = useState([])
+    useEffect(()=>{
+        const allCartList = getStoreCardList();
+        setCount(allCartList);
+    },[])
+    const [activeSection, setActiveSection] = useState('/');
     const Links = <>
-        <li><NavLink to="/home" onClick={() => setActiveSection('home')}>Home</NavLink></li>
+        <li><NavLink to="/" onClick={() => setActiveSection('/')}>Home</NavLink></li>
         <li><NavLink onClick={() => setActiveSection('statistics')} to="/statistics">Statistics</NavLink></li>
         <li><NavLink onClick={() => setActiveSection('dashboard')} to="/dashboard">Dashboard</NavLink></li>
     </>
     return (
-        <div className={`${activeSection === 'home' ? "navbar py-6 bg-[#9538E2] rounded-t-xl text-white" : "navbar py-6 bg-base-100"}`}>
+        <div className={`${activeSection === '/' ? "navbar py-6 bg-[#9538E2] rounded-t-xl text-white": "navbar py-6 bg-base-100"}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +48,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <div className='text-2xl p-4 bg-white border rounded-full text-black'><BsCart3 /></div>
+                <div className='text-2xl p-4 bg-white border rounded-full text-black'><BsCart3 /> {count.length}</div>
                 <div className='text-2xl p-4 bg-white border rounded-full text-black'><FaRegHeart /></div>
             </div>
         </div>

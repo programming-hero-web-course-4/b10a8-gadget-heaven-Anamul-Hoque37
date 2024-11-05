@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
+import { addToStoreCardList, addToStoreWishList } from '../Utilities/addToStore';
 
 const Products = () => {
 
@@ -11,6 +12,13 @@ const Products = () => {
     const product = data.find(product => product.product_id === id)
     const { product_image, product_title, price, description, Specification, rating, availability } = product
     console.log(product)
+
+    const handleMarkAsCard = (id) => {
+        addToStoreCardList(id);
+    }
+    const handleMarkAsWish = (id) =>{
+        addToStoreWishList(id);
+    }
 
     return (
         <div className='flex flex-col relative'>
@@ -30,8 +38,8 @@ const Products = () => {
                     <p className='text-lg font-bold text-[#09080F]'>Specification:<li>{Specification}</li></p>
                     <p className='text-lg font-bold text-[#09080F]'>Rating:{rating}</p>
                     <div className='flex gap-4'>
-                        <button className='flex rounded-full gap-4 p-3 text-lg font-bold text-[#FFFFFF] bg-[#9538E2]'>Add To Card <BsCart3 /></button>
-                        <button className='text-lg p-4 border-2 rounded-full font-bold bg-[#FFFFFF] text-[#3A3A3A]'><FaRegHeart /></button>
+                        <button onClick={()=>{handleMarkAsCard(id)}} className='flex rounded-full gap-4 p-3 text-lg font-bold text-[#FFFFFF] bg-[#9538E2]'>Add To Card <BsCart3 /></button>
+                        <button onClick={()=>{handleMarkAsWish(id)}} className='text-lg p-4 border-2 rounded-full font-bold bg-[#FFFFFF] text-[#3A3A3A]'><FaRegHeart /></button>
                     </div>
 
                 </div>
