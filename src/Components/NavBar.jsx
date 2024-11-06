@@ -20,6 +20,7 @@ const NavBar = () => {
         <li><NavLink to="/" onClick={() => setActiveSection('/')}>Home</NavLink></li>
         <li><NavLink onClick={() => setActiveSection('statistics')} to="/statistics">Statistics</NavLink></li>
         <li><NavLink onClick={() => setActiveSection('dashboard')} to="/dashboard">Dashboard</NavLink></li>
+        <li><NavLink onClick={() => setActiveSection('Contact')} to="/Contact">Contact Us</NavLink></li>
     </>
     return (
         <div className={`${activeSection === '/' ? "navbar py-6 bg-[#9538E2] rounded-t-xl text-white": "navbar py-6 bg-base-100"}`}>

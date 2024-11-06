@@ -31,6 +31,10 @@ const Dashboard = () => {
         setCartList(sortedCartList);
         toast('Successfully Sorted')
     }
+    const handlePurchase =() => {
+        localStorage.removeItem('card-list')
+        toast('Welcome to Purchases')
+    }
     const handleIsActiveState = (status) => {
         if (status == "cart") {
             setIsActive({
@@ -64,12 +68,12 @@ const Dashboard = () => {
                     <div className='flex gap-3 items-center'>
                         <p className='text-2xl font-bold text-[#0B0B0B]'>Total Cost: </p>
                         <button onClick={handleSortByPrice} className='text-lg font-medium border p-2 px-4 rounded-3xl bg-[#FFFFFF] text-[#9538E2]'>Sort by Price</button>
-                        <button className='text-lg font-medium p-2 px-4 rounded-3xl bg-[#9538E2] text-[#FFFFFF]'>Purchase</button>
+                        <button onClick={handlePurchase} className='text-lg font-medium p-2 px-4 rounded-3xl bg-[#9538E2] text-[#FFFFFF]'>Purchase</button>
                     </div>
                 </div>
                 <div className='flex flex-col w-4/5 mx-auto gap-6'>
                 {
-                    cartList.map((cart, index) =><Cart key={index} cart={cart}></Cart>)
+                    cartList.map((cart, index) =><Cart key={index} cartList={cartList} cart={cart}></Cart>)
                     
                 }
                 </div>
