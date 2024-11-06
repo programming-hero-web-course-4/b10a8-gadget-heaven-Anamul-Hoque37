@@ -34,7 +34,7 @@ const Products = () => {
                     <p className='text-xl font-semibold text-[#09080FCC]'>{price}</p>
                     <button className='text-2xl px-5 rounded-3xl font-semibold border-2 border-green-600 text-green-600 bg-[#309C081A]'>{availability === true ? "In Stock" : "Out of Stock"}</button>
                     <p className='text-lg font-normal text-[#09080F99]'>{description}</p>
-                    <p className='text-lg font-bold text-[#09080F]'>Specification:<li>{Specification}</li></p>
+                    <p className='text-lg font-bold text-[#09080F]'>Specification:<ol className='text-sm font-normal'>{Specification.map(item=><li> {item}</li>)}</ol></p>
                     <p className='text-lg font-bold text-[#09080F]'>Rating:{rating}</p>
                     <div className='flex gap-4'>
                         <button onClick={()=>{handleMarkAsCard(id)}} className='flex rounded-full gap-4 p-3 text-lg font-bold text-[#FFFFFF] bg-[#9538E2]'>Add To Card <BsCart3 /></button>

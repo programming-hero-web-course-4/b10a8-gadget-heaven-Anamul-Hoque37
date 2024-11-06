@@ -3,6 +3,7 @@ import { Outlet, useLoaderData } from 'react-router-dom';
 import { getStoreCardList, getStoreWishList } from '../Utilities/addToStore';
 import Cart from './Cart';
 import Wishlist from './Wishlist';
+import { toast } from 'react-toastify';
 
 const Dashboard = () => {
     const [cartList, setCartList] = useState([])
@@ -28,6 +29,7 @@ const Dashboard = () => {
     const handleSortByPrice = () =>{
         const sortedCartList = [...cartList].sort((a,b) => b.price - a.price)
         setCartList(sortedCartList);
+        toast('Successfully Sorted')
     }
     const handleIsActiveState = (status) => {
         if (status == "cart") {

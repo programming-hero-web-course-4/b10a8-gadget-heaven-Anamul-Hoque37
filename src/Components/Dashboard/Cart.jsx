@@ -1,9 +1,11 @@
 import React from 'react';
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { toast } from 'react-toastify';
 
 const Cart = ({cart}) => {
     const handleDelete =() => {
         localStorage.removeItem('card-list')
+        toast('Deleted this item')
     }
     const {product_image,product_title,description,price} = cart
     return (

@@ -53,8 +53,12 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <div className='text-2xl p-4 bg-white border rounded-full text-black'>{count.length}<BsCart3 /></div>
-                <div className='text-2xl p-4 bg-white border rounded-full text-black'>{wishCount.length}<FaRegHeart /></div>
+                <div className='flex flex-col items-center justify-end'>{count.length}
+                <div className='text-2xl p-4 bg-white border rounded-full text-black'><BsCart3 /></div>
+                </div>
+                <div className='flex flex-col items-center justify-center'>{wishCount.length}
+                <div className='text-2xl p-4 bg-white border rounded-full text-black'><FaRegHeart /></div>
+                </div>
             </div>
         </div>
     );
