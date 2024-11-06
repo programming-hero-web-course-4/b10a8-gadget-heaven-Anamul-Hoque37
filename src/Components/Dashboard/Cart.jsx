@@ -1,14 +1,17 @@
 import React from 'react';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { toast } from 'react-toastify';
+import { getStoreCardList } from '../Utilities/addToStore';
 
-const Cart = ({ cart , cartList }) => {
+const Cart = ({ cart, cartList }) => {
     const handleDelete = () => {
-        const updateCartList = cartList.filter(item=>item.product_id !== product_id);
-        localStorage.setItem('card-list', JSON.stringify(updateCartList));
+        const updateCartList = cartList.filter(item => item.product_id !== product_id);
+        const updated = updateCartList.map(product => product.product_id)
+        localStorage.setItem('card-list', JSON.stringify(updated));
         toast('Deleted this item')
+
     }
-    const {product_image,product_title,description,price, product_id} = cart
+    const { product_image, product_title, description, price, product_id } = cart
     return (
         <div className='flex border-2 gap-5 p-2 items-center justify-between rounded-2xl'>
             <div className='max-h-44 max-w-44 rounded-2xl'>
@@ -20,7 +23,7 @@ const Cart = ({ cart , cartList }) => {
                 <p className='text-xl font-bold'>{price}</p>
             </div>
             <div>
-                <button onClick={()=>handleDelete('id')} className='text-3xl items-center text-yellow-500 font-bold'><RiDeleteBin6Line /></button>
+                <button onClick={() => handleDelete('id')} className='text-3xl items-center text-yellow-500 font-bold'><RiDeleteBin6Line /></button>
             </div>
         </div>
     );

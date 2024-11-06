@@ -35,12 +35,12 @@ const router = createBrowserRouter([
       {
         path: "/cards/:product_id",
         element: <Products></Products>,
-        loader: () => fetch('/Laptop.json')
+        loader: () => fetch('./Laptop.json')
       },
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
-        loader: () => fetch('/Laptop.json')
+        loader: () => fetch('./Laptop.json')
       }
     ],
   },

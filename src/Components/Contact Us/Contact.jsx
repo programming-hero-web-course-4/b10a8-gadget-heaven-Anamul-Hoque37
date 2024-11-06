@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
 
 
@@ -20,7 +21,9 @@ const Contact = () => {
         toast('message sent')
     };
     return (
-        <div className='bg-green-300 flex flex-row justify-around text-center items-center p-6'>
+        <div>
+            <Helmet><title>Gadget | Contact Us Page</title></Helmet>
+            <div className='bg-green-300 flex flex-row justify-around text-center items-center p-6'>
             <div className='flex flex-row justify-between items-center gap-20'>
                 <div className='flex flex-col'>
                     <h2 className='text-2xl font-bold underline'>Contact Us</h2>
@@ -69,6 +72,7 @@ const Contact = () => {
                     <button className='btn bg-slate-300' type="submit">Send Message</button>
                 </form>
             </div>
+        </div>
         </div>
     );
 };
