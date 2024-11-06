@@ -91,6 +91,24 @@
     },
     {
         "product_id": 106,
+        "product_title": "Compact Laptop 15 Slim",
+        "product_image": "https://i.ibb.co.com/YhF6bxM/Compact-Laptop-13-Slim.jpg",
+        "category": "Laptops",
+        "price": 899.99,
+        "description": "A lightweight and ultra-slim laptop, ideal for on-the-go usage.",
+        "Specification": [
+            "Intel Core i5 Processor",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3 inch Full HD Display",
+            "Windows 11 Home",
+            "Battery life up to 10 hours"
+        ],
+        "availability": false,
+        "rating": 4.2
+    },
+    {
+        "product_id": 107,
         "product_title": "Galaxy X10 Pro",
         "product_image": "https://i.ibb.co.com/DD9zbyL/Galaxy-X10-Pro.jpg",
         "category": "Mobiles",
@@ -108,7 +126,7 @@
         "rating": 4.6
     },
     {
-        "product_id": 107,
+        "product_id": 108,
         "product_title": "Pixel Pro 6",
         "product_image": "https://i.ibb.co.com/P5yJG5Y/Pixel-Pro-6.jpg",
         "category": "Mobiles",
@@ -126,7 +144,7 @@
         "rating": 4.8
     },
     {
-        "product_id": 108,
+        "product_id": 109,
         "product_title": "EcoPhone Lite",
         "product_image": "https://i.ibb.co.com/qdFN2vK/Eco-Phone-Lite.jpg",
         "category": "Mobiles",
@@ -144,7 +162,7 @@
         "rating": 4.0
     }, 
     {
-        "product_id": 109,
+        "product_id": 110,
         "product_title": "TabMaster Pro 11",
         "product_image": "https://i.ibb.co.com/m029Qnd/Tab-Master-Pro-11.jpg",
         "category": "Tablets",
@@ -162,7 +180,7 @@
         "rating": 4.7
     },
     {
-        "product_id": 110,
+        "product_id": 111,
         "product_title": "KidsTab Safe Edition",
         "product_image": "https://i.ibb.co.com/f1rwrmz/Kids-Tab-Safe-Edition.jpg",
         "category": "Tablets",

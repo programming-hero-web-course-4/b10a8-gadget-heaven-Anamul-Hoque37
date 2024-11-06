@@ -3,7 +3,8 @@ import React from 'react';
 const ErrorPage = () => {
     return (
         <div>
-            <h1>This is Error Page</h1>
+            <h1 className='text-4xl'>Somethings went Wrong</h1>
+            <p className='text-2xl'>Please Check your Rout link</p>
         </div>
     );
 };
